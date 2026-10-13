@@ -1,0 +1,39 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* MBG SmartWaste Brand Colors */
+    --color-mbg-emerald: #065F46;
+    --color-mbg-emerald-light: #10B981;
+    --color-mbg-emerald-dark: #064E3B;
+
+    /* Waste Rate Indicator Colors */
+    --color-waste-safe: #059669;
+    --color-waste-warning: #D97706;
+    --color-waste-critical: #DC2626;
+}
+
+/* Utility for tabular numbers on metric displays */
+@utility tabular-nums {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Utility for metric font styling */
+@utility metric-text {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+/* Custom scrollbar for sidebar */
+@utility scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
